@@ -1,1 +1,1 @@
-export const server_ip = "http://localhost:5000"
+export const server_ip = "https://whistlehub-backend.herokuapp.com/"
