@@ -1,1 +1,1 @@
-export const server_ip = "http://localhost:4001"
+export const server_ip = "http://localhost:5000"
