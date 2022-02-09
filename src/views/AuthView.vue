@@ -60,6 +60,7 @@
 
 <script>
 import "framework7-icons";
+import {server_ip} from "../server_ip.js"
 
 export default {
   name: "auth",
@@ -77,7 +78,7 @@ export default {
     login_user(e) {
       e.preventDefault();
       console.log(this.email, this.password);
-      fetch("http://127.0.0.1:4001/login", {
+      fetch(server_ip+"/login", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -101,7 +102,7 @@ export default {
     register_user(e) {
       e.preventDefault();
       console.log(this.email, this.password);
-      fetch("http://127.0.0.1:4001/register", {
+      fetch(server_ip+"/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

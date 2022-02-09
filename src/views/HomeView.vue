@@ -93,6 +93,7 @@ import ChatElement from "../components/ChatElement.vue";
 import NewChatView from "../components/NewChatView.vue";
 import { getAuthData } from "../auth/auth";
 import { array_move } from "../functions/array_move.js";
+import {server_ip} from "../server_ip.js"
 
 const example = [
   {
@@ -148,7 +149,7 @@ export default {
         author: this.username,
       });
       */
-      fetch("http://127.0.0.1:4001/emit", {
+      fetch(server_ip+"/emit", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -182,7 +183,7 @@ export default {
       this.fetchTubeHistory();
     },
     fetchTubeHistory: function () {
-      fetch("http://127.0.0.1:4001/get_tube", {
+      fetch(server_ip+"/get_tube", {
         method: "POST",
         headers: {
           Accept: "application/json",
