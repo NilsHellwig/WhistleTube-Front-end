@@ -12,5 +12,8 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  publicPath: '/WhistleTube-Front-end/'
+  publicPath: "/WhistleTube-Front-end/",
+  server: {
+    port: "80",
+  },
 });
