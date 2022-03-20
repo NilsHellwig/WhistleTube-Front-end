@@ -1,1 +1,1 @@
-export const server_ip = "http://localhost:4001"
+export const server_ip = "http://ec2-3-94-86-2.compute-1.amazonaws.com"
