@@ -1,5 +1,7 @@
+import { server_ip } from "../server_ip";
+
 export async function checkAuth() {
-  const auth = await fetch("http://127.0.0.1:4001/check_auth", {
+  const auth = await fetch(server_ip+"/check_auth", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -20,7 +22,7 @@ export async function checkAuth() {
 }
 
 export async function getAuthData() {
-  const auth = await fetch("http://127.0.0.1:4001/check_auth", {
+  const auth = await fetch(server_ip+"/check_auth", {
     method: "POST",
     headers: {
       Accept: "application/json",
